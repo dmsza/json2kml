@@ -1,6 +1,7 @@
 #####################################################################################
 # Python script to convert Google Maps JSON file to a KML file
 # Copyright (C) 2017 Dimitri Souza
+# https://github.com/dmrsouza/json2kml
 #####################################################################################
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
