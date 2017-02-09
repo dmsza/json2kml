@@ -19,7 +19,6 @@ print ('Opening file "'+inputFile+'"')
 with open (inputFile) as jsonFile:
     data = json.load (jsonFile)
     
-    
 kml = simplekml.Kml ()
 
 count = 0
