@@ -20,6 +20,7 @@ with open (inputFile) as jsonFile:
     data = json.load (jsonFile)
     
 kml = simplekml.Kml ()
+kml.document.name = outputFile
 
 count = 0
 for place in data["features"]:
