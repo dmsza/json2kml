@@ -40,7 +40,7 @@ for place in data["features"]:
         kml.newpoint (name=title, coords=[(lon,lat)], address=address)
         count += 1
         
-print ('Saving file "'+inputFile+'"')
+print ('Saving file "'+outputFile+'"')
 kml.save (outputFile)
 
 print ('Done! Total of '+str(count)+' places saved to the KML file.')
