@@ -1,6 +1,6 @@
 # json2kml
 
-This is a simple Python 3 script that will convert the list of starred places in Google Maps into a KML file that can be imported into GPS navigation applications (suchs as MAPS.ME).
+This is a simple Python 3 script that will convert the list of starred/saved places (a.k.a. POIs) from Google Maps into a KML file that can be imported into GPS navigation applications (suchs as MAPS.ME).
 
 This script depends on “SIMPLEKML” library (https://simplekml.readthedocs.io/) and it can be installed via pip with the following command line:
 
