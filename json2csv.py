@@ -38,7 +38,7 @@ with open(outputFile, 'wt') as csvfile:
             else:
                 address = "N/A"
             
-            csvWriter.writerow ([lon,lat,title,address])
+            csvWriter.writerow ([lat,lon,title,address])
             count += 1
         
 print ('Done! Total of '+str(count)+' places saved to the CSV file.')
