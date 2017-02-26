@@ -10,9 +10,15 @@
    
 import json
 import simplekml
+import sys
+import codecs
 
 inputFile = "Saved Places.json"
 outputFile = "Saved Places.kml"
+
+# JSON Encoding is UTF-8. Change stdout to UTF-8 to prevent encoding error
+# when calling print titles inside the loop
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 print ('Opening file "'+inputFile+'"')
 
