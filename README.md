@@ -18,14 +18,14 @@ This repository contain three [Python 3](https://www.python.org/downloads/) scri
 
 ## json2kml
 
-This script depends on “SIMPLEKML” library (https://simplekml.readthedocs.io/) and it can be installed via pip with the following command line:
+This script depends on [“SIMPLEKML” library] (https://simplekml.readthedocs.io/) and it can be installed via pip with the following command line:
 ```
 pip install simplekml
 ```
 After this, the following steps must be executed to generate the KML file from the Google Maps starred/saved locations:
 
 1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section _"How to export Google Maps saved/starred locations"_.
-2. Download and save the Python script https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2kml.py to the same folder where the file _"Saved Places.json"_ is located.
+2. Download and save the Python script [json2kml.py] (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2kml.py) to the same folder where the file _"Saved Places.json"_ is located.
 3. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line ```python json2kml.py```
 4.	The script will run and will create the file _“Saved Places.kml”_.
 
@@ -33,7 +33,7 @@ After this, the following steps must be executed to generate the KML file from t
 _[ Documentation in progress... ]_
 
 1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section _"How to export Google Maps saved/starred locations"_.
-2. Download and save the Python script https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2csv.py to the same folder where the file _"Saved Places.json"_ is located.
+2. Download and save the Python script [json2csv.py] (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2csv.py) to the same folder where the file _"Saved Places.json"_ is located.
 3. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line: ```python json2csv.py```
 4. The script will run and will create the file _“Saved Places.csv”_.
 5. Use this file with other convertion tools or open it in Excel.
@@ -42,7 +42,7 @@ _[ Documentation in progress... ]_
 _[ Documentation in progress... ]_
 
 1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section _"How to export Google Maps saved/starred locations"_.
-2. Download and save the Python script https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2sygic.py to the same folder where the file _"Saved Places.json"_ is located.
+2. Download and save the Python script [json2sygic.py] (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2sygic.py) to the same folder where the file _"Saved Places.json"_ is located.
 3. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line ```python json2sygic.py```
 4. The script will run and will create the file _“items.dat”_.
 5. Copy the file _“items.dat”_ to your Android device. See notes below for more details about the folder to where this file must be copied. **IMPORTANT**: when overwriting "items.dat" files, **all current Sygic favorites _will be lost_**. Keep this in mind.
