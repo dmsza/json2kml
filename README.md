@@ -9,6 +9,13 @@ This repository contain three Python 3 scripts that can be used to **export star
 * **json2sygic**: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into the internal format used by Sygic Android to save its favorites ("items.dat") file.
 
 
+## How to export Google Maps saved/starred locations
+
+1.	Go to Google Takeout (https://takeout.google.com/settings/takeout). 
+2.	Click “Select None” and then select “Maps (your places)”. Make sure this is the only option selected.
+3.	Google will export a ZIP file. Open this file and extract the file “\Takeout\Maps (your places)\Saved Places.json” to a directory in our PC (do not change the file name).
+4.	Download the “json2kml.py” script (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2kml.py) and save to the same directory where you saved "Saved Places.json".
+
 ## json2kml
 
 This script depends on “SIMPLEKML” library (https://simplekml.readthedocs.io/) and it can be installed via pip with the following command line:
@@ -17,10 +24,7 @@ pip install simplekml
 
 After this, the following steps must be executed:
 
-1.	Go to Google Takeout (https://takeout.google.com/settings/takeout). 
-2.	Click “Select None” and then select “Maps (your places)”. Make sure this is the only option selected.
-3.	Google will export a ZIP file. Open this file and extract the file “\Takeout\Maps (your places)\Saved Places.json” to a directory in our PC (do not change the file name).
-4.	Download the “json2kml.py” script (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2kml.py) and save to the same directory where you saved "Saved Places.json".
+1. First go to Google Takeout and save the "Saved Places.json" file to the same folder where the script is located. More details in the previous section.
 5.	Opent a command prompt, change the current directory to where the above files were saved, and run the script with the command line “python json2kml.py”
 6.	The script will run and will create the file “Saved Places.kml”.
 
