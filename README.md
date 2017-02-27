@@ -1,10 +1,12 @@
+# Export Google Maps saved/starred locations to KML/CSV/Sygic
+
 This repository contain three Python 3 scripts that can be used to **export starred locations in Google Maps to other formats** that can be imported on 3rd party GPS navigation apps. The three scrips are:
 
-* json2kml: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into a KML file that can be imported into various GPS navigation applications (suchs as MAPS.ME).
+* **json2kml**: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into a KML file that can be imported into various GPS navigation applications (suchs as MAPS.ME).
 
-* json2csv: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into a CSV (*Comma Separated Values*) file that can be imported into some POI convertion tools or edited directly in Excel.
+* **json2csv**: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into a CSV (*Comma Separated Values*) file that can be imported into some POI convertion tools or edited directly in Excel.
 
-* json2sygic: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into the internal format used by Sygic Android to save its favorites ("items.dat") file.
+* **json2sygic**: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into the internal format used by Sygic Android to save its favorites ("items.dat") file.
 
 
 ## json2kml
@@ -30,7 +32,7 @@ Documentation in progress...
 
 Documentation in progress... Some notes:
 
-* In Android devices, Sygic saves the favorites into file "items.dat". This file is located in folder "/Sygic/Res/db" if Sygic is configured to use internal storage or in folder "" if Sygic is configured to use external SD card.
+* In Android devices, Sygic saves the favorites into file "items.dat". This file is located in folder _"/Sygic/Res/db/items.dat"_ if Sygic is configured to use internal storage or in folder _"/Android/data/com.sygic.aura/files/Res/db/items.dat"_ if Sygic is configured to use external SD card.
 * This script creates a new "items.dat" file with all saved places from Google. This file needs to be copied to one of the above foldres.
-* **IMPORTANT**: when overwriting "items.dat" files, **all current Sygic favorites** will be lost. Keep this in mind.
+* **IMPORTANT**: when overwriting "items.dat" files, **all current Sygic favorites _will be lost_**. Keep this in mind.
 
