@@ -1,6 +1,6 @@
 # Export Google Maps saved/starred locations to KML/CSV/Sygic
 
-This repository contain three Python 3 scripts that can be used to **export starred locations from Google Maps to other formats** which then can be imported by GPS navigation apps or other POI convertion tools. The three scrips are:
+This repository contain three [Python 3](https://www.python.org/downloads/) scripts that can be used to **export starred locations from Google Maps to other formats** which then can be imported by GPS navigation apps or other POI convertion tools. The three scrips are:
 
 * **json2kml**: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into a **KML file** that can be imported into various GPS navigation applications (suchs as MAPS.ME).
 
