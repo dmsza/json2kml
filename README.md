@@ -8,7 +8,6 @@ This repository contain three [Python 3](https://www.python.org/downloads/) scri
 
 * **json2sygic**: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into the internal format used by Sygic Android to save its favorites (**"items.dat"**) file.
 
-
 ## How to export Google Maps saved/starred locations to a JSON file
 
 1.	Go to Google Takeout (https://takeout.google.com/settings/takeout). 
@@ -30,18 +29,16 @@ After this, the following steps must be executed to generate the KML file from t
 4.	The script will run and will create the file _“Saved Places.kml”_.
 
 ## json2csv
-_[ Documentation in progress... ]_
 
-1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section _"How to export Google Maps saved/starred locations"_.
+1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section ["How to export Google Maps saved/starred locations"] (#how-to-export-google-maps-savedstarred-locations-to-a-json-file).
 2. Download and save the Python script [json2csv.py] (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2csv.py) to the same folder where the file _"Saved Places.json"_ is located.
 3. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line: ```python json2csv.py```
 4. The script will run and will create the file _“Saved Places.csv”_.
 5. Use this file with other convertion tools or open it in Excel.
 
 ## json2sygic
-_[ Documentation in progress... ]_
 
-1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section _"How to export Google Maps saved/starred locations"_.
+1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section ["How to export Google Maps saved/starred locations"] (#how-to-export-google-maps-savedstarred-locations-to-a-json-file).
 2. Download and save the Python script [json2sygic.py] (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2sygic.py) to the same folder where the file _"Saved Places.json"_ is located.
 3. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line ```python json2sygic.py```
 4. The script will run and will create the file _“items.dat”_.
