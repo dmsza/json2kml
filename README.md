@@ -25,14 +25,14 @@ pip install simplekml
 After this, the following steps must be executed to generate the KML file from the Google Maps starred/saved locations:
 
 1. First go to Google Takeout and save the "Saved Places.json" file to the same folder where the script is located. More details in the above section _"How to export Google Maps saved/starred locations"_.
-2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line _“python json2kml.py”_
+2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line ```python json2kml.py```
 3.	The script will run and will create the file _“Saved Places.kml”_.
 
 ## json2csv
 _[ Documentation in progress... ]_
 
 1. First go to Google Takeout and save the "Saved Places.json" file to the same folder where the script is located. More details in the above section _"How to export Google Maps saved/starred locations"_.
-2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line: ```_“python json2csv.py”_```
+2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line: ```python json2csv.py```
 3. The script will run and will create the file _“Saved Places.csv”_.
 4. Use this file with other convertion tools or open it in Excel.
 
@@ -40,7 +40,7 @@ _[ Documentation in progress... ]_
 _[ Documentation in progress... ]_
 
 1. First go to Google Takeout and save the "Saved Places.json" file to the same folder where the script is located. More details in the above section _"How to export Google Maps saved/starred locations"_.
-2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line _“python json2sygic.py”_
+2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line ```python json2sygic.py```
 3. The script will run and will create the file _“items.dat”_.
 4. Copy the file _“items.dat”_ to your Android device. See notes below for more details about the folder to where this file must be copied.
 
@@ -49,4 +49,3 @@ _[ Documentation in progress... ]_
 * In Android devices, Sygic saves the favorites into file "items.dat". This file is located in folder _"/Sygic/Res/db/items.dat"_ if Sygic is configured to use internal storage or in folder _"/Android/data/com.sygic.aura/files/Res/db/items.dat"_ if Sygic is configured to use external SD card.
 * This script creates a new "items.dat" file with all saved places from Google. This file needs to be copied to one of the above foldres.
 * **IMPORTANT**: when overwriting "items.dat" files, **all current Sygic favorites _will be lost_**. Keep this in mind.
-
