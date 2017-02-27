@@ -49,6 +49,6 @@ _[ Documentation in progress... ]_
 
 **Notes:**
 
-* In Android devices, Sygic saves the favorites into file "items.dat". This file is located in folder _"/Sygic/Res/db/items.dat"_ if Sygic is configured to use internal storage or in folder _"/Android/data/com.sygic.aura/files/Res/db/items.dat"_ if Sygic is configured to use external SD card.
+* In Android devices, Sygic saves the favorites to file "items.dat" (it's a SQLite3 database). This file is located in folder _"/Sygic/Res/db/items.dat"_ if Sygic is configured to use internal storage or in folder _"/Android/data/com.sygic.aura/files/Res/db/items.dat"_ if Sygic is configured to use external SD card.
 * This script creates a new "items.dat" file with all saved places from Google. This file needs to be copied to one of the above foldres.
 * **IMPORTANT**: when overwriting "items.dat" files, **all current Sygic favorites _will be lost_**. Keep this in mind.
