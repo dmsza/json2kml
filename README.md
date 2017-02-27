@@ -24,7 +24,7 @@ pip install simplekml
 ```
 After this, the following steps must be executed to generate the KML file from the Google Maps starred/saved locations:
 
-1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section _"How to export Google Maps saved/starred locations"_.
+1. First go to Google Takeout and save the _"Saved Places.json"_ file to a folder on your local disk. More details in the above section ["How to export Google Maps saved/starred locations"] (#how-to-export-google-maps-savedstarred-locations-to-a-json-file).
 2. Download and save the Python script [json2kml.py] (https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2kml.py) to the same folder where the file _"Saved Places.json"_ is located.
 3. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line ```python json2kml.py```
 4.	The script will run and will create the file _“Saved Places.kml”_.
