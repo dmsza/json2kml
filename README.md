@@ -32,9 +32,7 @@ After this, the following steps must be executed to generate the KML file from t
 _[ Documentation in progress... ]_
 
 1. First go to Google Takeout and save the "Saved Places.json" file to the same folder where the script is located. More details in the above section _"How to export Google Maps saved/starred locations"_.
-2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line:
-```_“python json2csv.py”_
-```
+2. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line: ```_“python json2csv.py”_```
 3. The script will run and will create the file _“Saved Places.csv”_.
 4. Use this file with other convertion tools or open it in Excel.
 
