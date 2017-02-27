@@ -45,7 +45,7 @@ _[ Documentation in progress... ]_
 2. Download and save the Python script https://raw.githubusercontent.com/dmrsouza/json2kml/master/json2sygic.py to the same folder where the file _"Saved Places.json"_ is located.
 3. Open a command prompt, change the current directory to where the above files were saved, and run the script with the command line ```python json2sygic.py```
 4. The script will run and will create the file _“items.dat”_.
-5. Copy the file _“items.dat”_ to your Android device. See notes below for more details about the folder to where this file must be copied.
+5. Copy the file _“items.dat”_ to your Android device. See notes below for more details about the folder to where this file must be copied. **IMPORTANT**: when overwriting "items.dat" files, **all current Sygic favorites _will be lost_**. Keep this in mind.
 
 **Notes:**
 
