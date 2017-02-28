@@ -30,7 +30,7 @@ kml.document.name = outputFile
 
 count = 0
 for place in data["features"]:
-    if place["geometry"]["type"] == "Point":
+    if place["type"] == "Feature":
         title = place["properties"]["Title"]
         print ('Parsing place "'+title+'"')
         
