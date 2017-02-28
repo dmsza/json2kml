@@ -17,7 +17,7 @@ This repository contain three [Python 3](https://www.python.org/downloads/) scri
 
 ## json2kml
 
-This script depends on [“SIMPLEKML” library] (https://simplekml.readthedocs.io/) and it can be installed via pip with the following command line (on Windows you may need to run this command with in Command Prompt _Admin_):
+This script depends on [“SIMPLEKML” library] (https://simplekml.readthedocs.io/) and it can be installed via pip with the following command line (on Windows you may need to run this command in Command Prompt _Admin_):
 ```
 pip install simplekml
 ```
