@@ -7,7 +7,7 @@
 # it under the terms of the GNU General Public License v3 as published by
 # the Free Software Foundation.
 #####################################################################################
-   
+
 import json
 import simplekml
 import sys
@@ -24,7 +24,7 @@ print ('Opening file "'+inputFile+'"')
 
 with open (inputFile) as jsonFile:
     data = json.load (jsonFile)
-    
+
 kml = simplekml.Kml ()
 kml.document.name = outputFile
 
@@ -33,19 +33,22 @@ for place in data["features"]:
     if place["type"] == "Feature":
         title = place["properties"]["Title"]
         print ('Parsing place "'+title+'"')
-        
+
         placeLocation = place["properties"]["Location"]
         lon = place["geometry"]["coordinates"][0]
         lat = place["geometry"]["coordinates"][1]
-        
+
         if "Address" in placeLocation:
             address = placeLocation ["Address"]
         else:
             address = "N/A"
-        
+
+        title = title.replace("&", "and")
+        address = address.replace("&", "and")
+
         kml.newpoint (name=title, coords=[(lon,lat)], address=address)
         count += 1
-        
+
 print ('Saving file "'+outputFile+'"')
 kml.save (outputFile)
 
