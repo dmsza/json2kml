@@ -43,8 +43,8 @@ for place in data["features"]:
         else:
             address = "N/A"
 
-        title = title.replace("&", "and")
-        address = address.replace("&", "and")
+        title = title.replace("&", "&amp;")
+        address = address.replace("&", "&amp;")
 
         kml.newpoint (name=title, coords=[(lon,lat)], address=address)
         count += 1
