@@ -1,0 +1,71 @@
+{
+   "html_attributions" : [],
+   "result" : {
+      "address_components" : [
+         {
+            "long_name" : "4",
+            "short_name" : "4",
+            "types" : [ "street_number" ]
+         },
+         {
+            "long_name" : "Calle Cruz de Piedra",
+            "short_name" : "Calle Cruz de Piedra",
+            "types" : [ "route" ]
+         },
+         {
+            "long_name" : "Alacant",
+            "short_name" : "Alacant",
+            "types" : [ "locality", "political" ]
+         },
+         {
+            "long_name" : "Alicante",
+            "short_name" : "A",
+            "types" : [ "administrative_area_level_2", "political" ]
+         },
+         {
+            "long_name" : "Comunidad Valenciana",
+            "short_name" : "Comunidad Valenciana",
+            "types" : [ "administrative_area_level_1", "political" ]
+         },
+         {
+            "long_name" : "Spain",
+            "short_name" : "ES",
+            "types" : [ "country", "political" ]
+         },
+         {
+            "long_name" : "03015",
+            "short_name" : "03015",
+            "types" : [ "postal_code" ]
+         }
+      ],
+      "adr_address" : "\u003cspan class=\"street-address\"\u003eCalle Cruz de Piedra, 4\u003c/span\u003e, \u003cspan class=\"postal-code\"\u003e03015\u003c/span\u003e \u003cspan class=\"locality\"\u003eAlacant\u003c/span\u003e, \u003cspan class=\"region\"\u003eAlicante\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eSpain\u003c/span\u003e",
+      "formatted_address" : "Calle Cruz de Piedra, 4, 03015 Alacant, Alicante, Spain",
+      "geometry" : {
+         "location" : {
+            "lat" : 38.3642358,
+            "lng" : -0.4626489
+         },
+         "viewport" : {
+            "northeast" : {
+               "lat" : 38.3655847802915,
+               "lng" : -0.4612999197084979
+            },
+            "southwest" : {
+               "lat" : 38.3628868197085,
+               "lng" : -0.463997880291502
+            }
+         }
+      },
+      "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id" : "ce1aa5a252b86d559268866a6a4858db9bba3dff",
+      "name" : "Calle Cruz de Piedra, 4",
+      "place_id" : "ChIJFwinI3E3Yg0RSMb3_GWb6IU",
+      "reference" : "CmRbAAAAn6NLYXEs-ttLvUlgjnh5aDHt-LR_hXe6JmUN8fzv6MJ7Q50xt_zUU_WlTc3aL_BQc70-1YjEb6Soluro5rA8cIFJG_w08RSr_JWo_SFEFc1Ncme_dKVKsPX6Q0LtO8gWEhACTzabAMLQfM5xt1_BNsywGhSZr0WRGlutqeuRgs-IY41ndk3yoQ",
+      "scope" : "GOOGLE",
+      "types" : [ "street_address" ],
+      "url" : "https://maps.google.com/?q=Calle+Cruz+de+Piedra,+4,+03015+Alacant,+Alicante,+Spain&ftid=0xd62377123a70817:0x85e89b65fcf7c648",
+      "utc_offset" : 60,
+      "vicinity" : "Alacant"
+   },
+   "status" : "OK"
+}
