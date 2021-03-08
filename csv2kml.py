@@ -2,10 +2,10 @@
 """
 Extract Google Place IDs from Google Takeout
 
-Usage: extract.py google-maps-favorites-2020.csv
-
-Title,Note,URL,Comment
-Pizzabar DEEG,,https://www.google.com/maps/place/Pizzabar+DEEG/data=!4m2!3m1!1s0x47c6eef6ec509509:0x519b160daf1c8e59,
+Usage:   extract.py favorites.csv > out.kml
+Author:  Devin Bayer <dev@doubly.so>
+Repo:    https://github.com/akvadrako/json2kml
+License: GPL 3.0
 """
 
 import sys, csv, re
@@ -51,7 +51,7 @@ for row in reader:
     m = re.match(r'.*google.com/maps/place/.*/data=.*!1s(0x[0-9a-fx:]+)', p.url)
     if not m:
         log('nomatch', p.url)
-        csv.writer(failed_fd).writerow(row + ['error: ' + data['status']])
+        csv.writer(failed_fd).writerow(row)
         continue
     
     ftid = m.group(1)
