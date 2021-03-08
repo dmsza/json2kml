@@ -1,6 +1,8 @@
-# Export Google Maps saved/starred locations to KML/CSV/Sygic
+# Export Google Maps saved/starred/favorite locations to KML/CSV/Sygic
 
-This repository contain three [Python 3](https://www.python.org/downloads/) scripts that can be used to **export starred locations from Google Maps to other formats** which then can be imported by GPS navigation apps or other POI convertion tools. The three scrips are:
+This repository contain 4 [Python 3](https://www.python.org/downloads/) scripts that can be used to **export starred locations from Google Maps to other formats** which then can be imported by GPS navigation apps or other POI convertion tools. The three scrips are:
+
+* **csv2kml**: Export Favorites / Flagged Places / Want To Go / and custom lists.
 
 * **json2kml**: this script converts the list of starred/saved places (a.k.a. POIs) from Google Maps into a **KML file** that can be imported into various GPS navigation applications (suchs as MAPS.ME).
 
@@ -11,9 +13,37 @@ This repository contain three [Python 3](https://www.python.org/downloads/) scri
 ## How to export Google Maps saved/starred locations to a JSON file
 
 1.	Go to Google Takeout (https://takeout.google.com/settings/takeout). 
-2.	Click “Select None” and then select “Maps (your places)”. Make sure this is the only option selected.
+2.	Click “Select None” and then select
+- “Maps (your places)”.
+- "Saved" Collections of saved links (images, places, web pages, etc.) from Google Search and Maps
 3.	Google will export a ZIP file. Save this file to your local disk, open it and extract the file “\Takeout\Maps (your places)\Saved Places.json” to a directory in your PC (do not change the file name).
-4.	Download one of the scripts below and save to the same directory where you saved "Saved Places.json".
+
+## csv2kml
+
+Google Takeout stores several files as CSV:
+
+- Saved/Favourite places.csv
+- Saved/Flag.csv
+- Saved/Want to go.csv
+
+First you need a Google API key:
+
+- If needed, greated a Google Cloud Project
+- Enable Places API
+- Goto <https://console.cloud.google.com/apis/credentials>
+- Click: Create credentials
+- Copy API key
+- Run this and paste to save key:
+
+    install -D /dev/stdin -m 600 ~/.private/google-api
+
+This script depends on `mako` so `pip3 install mako`.
+
+Run it like this:
+
+    ./csv2kml.py sample/takeout.csv > output.kml 
+
+Checked `failed.csv` for entries we were not able to convert.
 
 ## json2kml
 
@@ -49,3 +79,4 @@ After this, the following steps must be executed to generate the KML file from t
 * In Android devices, Sygic saves the favorites to file "items.dat" (it's a SQLite3 database). This file is located in folder _"/Sygic/Res/db/items.dat"_ if Sygic is configured to use internal storage or in folder _"/Android/data/com.sygic.aura/files/Res/db/items.dat"_ if Sygic is configured to use external SD card.
 * This script creates a new "items.dat" file with all saved places from Google. This file needs to be copied to one of the above foldres.
 * **IMPORTANT**: when overwriting "items.dat" files, **all current Sygic favorites _will be lost_**. Keep this in mind.
+
