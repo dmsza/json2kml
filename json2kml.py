@@ -32,8 +32,8 @@ kml.document.name = outputFile
 count = 0
 for place in data["features"]:
     if place["type"] == "Feature":
-        title = html.escape(place["properties"]["Title"])
-        print(f'Parsing place "{title}"')
+        name = html.escape(place["properties"]["Title"])
+        print(f'Parsing place "{name}"')
 
         placeLocation = place["properties"]["Location"]
         lon = place["geometry"]["coordinates"][0]
@@ -44,7 +44,7 @@ for place in data["features"]:
         else:
             address = None
 
-        kml.newpoint(name=title, coords=[(lon, lat)], address=address)
+        kml.newpoint(name=name, coords=[(lon, lat)], address=address)
         count += 1
 
 print(f'Saving file "{outputFile}"')
