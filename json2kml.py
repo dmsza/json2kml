@@ -18,7 +18,7 @@ outputFile = "Saved Places.kml"
 
 # JSON Encoding is UTF-8. Change stdout to UTF-8 to prevent encoding error
 # when calling print titles inside the loop
-sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+# sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 print(f'Opening file "{inputFile}"')
 
