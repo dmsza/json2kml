@@ -33,17 +33,28 @@ kml.document.name = outputFile
 count = 0
 for place in data["features"]:
     if place["type"] == "Feature":
-        name = html.escape(place["properties"]["Title"])
+        try:
+            name = html.escape(place["properties"]["Title"])
+        except KeyError:
+            name = html.escape(place["properties"]["name"])
         print(f'Parsing place "{name}"')
 
-        placeLocation = place["properties"]["Location"]
         lon = place["geometry"]["coordinates"][0]
         lat = place["geometry"]["coordinates"][1]
 
-        if "Address" in placeLocation:
-            address = html.escape(placeLocation["Address"])
-        else:
-            address = None
+        try:
+            placeLocation = place["properties"]["Location"]
+
+            if "Address" in placeLocation:
+                address = html.escape(placeLocation["Address"])
+            else:
+                address = None
+
+        except KeyError:
+            if 'address' in place['properties']:
+                address = html.escape(place['properties']['address'])
+            else:
+                address = None
 
         kml.newpoint(name=name, coords=[(lon, lat)], address=address)
         count += 1
