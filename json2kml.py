@@ -12,6 +12,7 @@ import json
 import simplekml
 import sys
 import codecs
+import html
 
 inputFile = "Saved Places.json"
 outputFile = f'{inputFile[:-5]} [json2kml.py].kml'
@@ -31,7 +32,7 @@ kml.document.name = outputFile
 count = 0
 for place in data["features"]:
     if place["type"] == "Feature":
-        title = place["properties"]["Title"]
+        title = html.escape(place["properties"]["Title"])
         print(f'Parsing place "{title}"')
 
         placeLocation = place["properties"]["Location"]
@@ -39,7 +40,7 @@ for place in data["features"]:
         lat = place["geometry"]["coordinates"][1]
 
         if "Address" in placeLocation:
-            address = placeLocation["Address"]
+            address = html.escape(placeLocation["Address"])
         else:
             address = None
 
