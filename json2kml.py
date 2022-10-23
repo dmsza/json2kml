@@ -14,7 +14,7 @@ import sys
 import codecs
 
 inputFile = "Saved Places.json"
-outputFile = "Saved Places.kml"
+outputFile = f'{inputFile[:-5]} [json2kml.py].kml'
 
 # JSON Encoding is UTF-8. Change stdout to UTF-8 to prevent encoding error
 # when calling print titles inside the loop
