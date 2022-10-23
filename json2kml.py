@@ -27,6 +27,7 @@ with open(inputFile, encoding='utf8') as jsonFile:
     data = json.load(jsonFile)
 
 kml = simplekml.Kml()
+kml.resetidcounter()
 kml.document.name = outputFile
 
 count = 0
