@@ -20,7 +20,7 @@ outputFile = "Saved Places.kml"
 # when calling print titles inside the loop
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
-print('Opening file "'+inputFile+'"')
+print(f'Opening file "{inputFile}"')
 
 with open(inputFile) as jsonFile:
     data = json.load(jsonFile)
@@ -32,7 +32,7 @@ count = 0
 for place in data["features"]:
     if place["type"] == "Feature":
         title = place["properties"]["Title"]
-        print('Parsing place "'+title+'"')
+        print(f'Parsing place "{title}"')
 
         placeLocation = place["properties"]["Location"]
         lon = place["geometry"]["coordinates"][0]
@@ -46,7 +46,7 @@ for place in data["features"]:
         kml.newpoint(name=title, coords=[(lon, lat)], address=address)
         count += 1
 
-print('Saving file "'+outputFile+'"')
+print(f'Saving file "{outputFile}"')
 kml.save(outputFile)
 
-print('Done! Total of '+str(count)+' places saved to the KML file.')
+print(f'Done! Total of {count} places saved to the KML file.')
