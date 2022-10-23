@@ -22,7 +22,7 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 print(f'Opening file "{inputFile}"')
 
-with open(inputFile) as jsonFile:
+with open(inputFile, encoding='utf8') as jsonFile:
     data = json.load(jsonFile)
 
 kml = simplekml.Kml()
