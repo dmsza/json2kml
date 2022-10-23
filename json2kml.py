@@ -41,7 +41,7 @@ for place in data["features"]:
         if "Address" in placeLocation:
             address = placeLocation["Address"]
         else:
-            address = "N/A"
+            address = None
 
         kml.newpoint(name=title, coords=[(lon, lat)], address=address)
         count += 1
