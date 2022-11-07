@@ -39,9 +39,9 @@ count = 0
 for place in data["features"]:
     if place["type"] == "Feature":
         try:
-            name = html.escape(place["properties"]["Title"])
+            name = place["properties"]["Title"]
         except KeyError:
-            name = html.escape(place["properties"]["name"])
+            name = place["properties"]["name"]
         print(f'Parsing place "{name}"')
 
         lon = place["geometry"]["coordinates"][0]
